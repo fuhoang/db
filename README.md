@@ -12,7 +12,7 @@ require_once ('Database.php');
 ```
 
 ## Configuration
-Replace with your database credentails detail on the config.ini
+Replace with your database credential details on the config.ini
 
 ```
 [database]
