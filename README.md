@@ -1,4 +1,4 @@
-#PHP-MYSQLI Databases OOP
+# PHP-MYSQLI Databases OOP
 <hr>
 
 This is a simple OOP database connection to MYSQL
@@ -11,7 +11,7 @@ To utilize this class, first import Database.php into your project, and require 
 require_once ('Database.php');
 ```
 
-## configuration
+## Configuration
 Replace with your database credentails detail on the config.ini
 
 ```
