@@ -6,9 +6,10 @@ class Db {
 
 	public function connect() {
 
-		$config = parse_ini_file('./config.ini');
-		self::$connection = new mysqli('localhost', $config['username'], $config['password'], $config['dbname']);
+		$config = parse_ini_file('config.ini');		
+		self::$connection = new mysqli('127.0.0.1', $config['username'], $config['password'], $config['dbname']);
 
+		//var_dump(self::$connection);
 		if(self::$connection == false) {
 			// Handler error - notify administrator, log to a file, show an error screen, etc. 
 			echo "Database error";
@@ -38,7 +39,7 @@ class Db {
 		}
 
 		while( $row = $result->fetch_assoc()){
-			$rows[] = $row
+			$rows[] = $row;
 		}
 
 		return $rows;
