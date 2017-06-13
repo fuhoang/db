@@ -20,3 +20,11 @@ username = username here
 password = password here
 dbname = database name
 ```
+
+## Query
+Simple example
+
+```php
+$db = new Db();
+$rows = $db -> select("SELECT `name`,`email` FROM `users` WHERE id=5");
+```

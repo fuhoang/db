@@ -6,8 +6,10 @@ class Db {
 
 	public function connect() {
 
-		$config = parse_ini_file('config.ini');		
-		self::$connection = new mysqli('127.0.0.1', $config['username'], $config['password'], $config['dbname']);
+		if(!isset(self::$connection)){
+			$config = parse_ini_file('config.ini');		
+			self::$connection = new mysqli('127.0.0.1', $config['username'], $config['password'], $config['dbname']);
+		}
 
 		//var_dump(self::$connection);
 		if(self::$connection == false) {
